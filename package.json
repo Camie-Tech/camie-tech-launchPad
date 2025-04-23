@@ -1,0 +1,63 @@
+{
+  "name": "camie-launch-pad",
+  "displayName": "camie-workspace",
+  "description": "Starter code snippets for camie ai workspace to boost productivity",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "camie-tech.supabaseAuth",
+        "title": "Insert Supabase Auth Service"
+      },
+      {
+        "command": "camie-tech.firebaseAuth",
+        "title": "Insert Firebase Auth Service"
+      },
+      {
+        "command": "camie-tech.googleAuth",
+        "title": "Insert Google Auth Service"
+      },
+      {
+        "command": "camie-tech.customEmailPasswordAuth",
+        "title": "Insert Custom Email/Password Auth Service"
+      },
+      {
+        "command": "camie-tech.emailService",
+        "title": "Insert Email Service"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
